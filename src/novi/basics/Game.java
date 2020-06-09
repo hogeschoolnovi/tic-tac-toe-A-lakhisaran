@@ -4,6 +4,7 @@ import java.io.*;
 
 import static novi.basics.Main.USERINPUT;
 
+// Waarom implement je Serializable?
 public class Game implements Serializable {
     private Player player1;
     private Player player2;
@@ -39,10 +40,10 @@ public class Game implements Serializable {
         System.out.println("Do you want to continue? y/n");
         String answer = USERINPUT.next();
         System.out.println("You answered: " + answer);
-        if (answer.equals("y")){
+        if (answer.equals("y")){ // je zou hier equalsIgnoreCase kunnen gebruiken.
             System.out.println("Let's continue");
             return false;
-        }
+        } //Return true hoeft niet binnen een else statement
         else {
             return true;
         }
