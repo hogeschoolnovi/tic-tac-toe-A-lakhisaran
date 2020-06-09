@@ -2,11 +2,13 @@ package novi.basics;
 
 import java.io.Serializable;
 
+// Waarom serializable?
 public class Player implements Serializable {
     private String playerName;
     private int score;
     private char playerToken;
 
+    // ongebruikte code
     public Player() {
 
     }

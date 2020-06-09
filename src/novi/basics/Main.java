@@ -1,25 +1,30 @@
 package novi.basics;
 
+//Vergeet niet ongebruikte imports te verwijderen.
+// Zelfde geldt voor uitgecommentarieerde code. Gewoon weghalen.
+
 import java.io.File;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 	// Setup scanner to get user input
+	// Het is good practise om dit altijd final te maken.
+	// Daarnaast public???
 	public static Scanner USERINPUT = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		String test = "ABC";
 		test = test.toLowerCase();
 		System.out.println(test);
-		Player player1 = null;
+		Player player1 = null; // Ik zou de = null weglaten.
 		Player player2 = null;
 //		Gameboard gameBoard = null;
 		// Get user input and create players
 		System.out.println("Hi there, do you want a (s)ingle or a (m)ultiplayer game?");
 		String answer = USERINPUT.next();
 
-		if (answer.equals("s")) {
+		if (answer.equals("s")) { // Kan evt. equalsIgnoreCase
 			player2 = new Player("AI", 0, 'o');
 			TicTacToeBoardSingle gameBoard = new TicTacToeBoardSingle();
 			System.out.println("Player 1, please input your name");

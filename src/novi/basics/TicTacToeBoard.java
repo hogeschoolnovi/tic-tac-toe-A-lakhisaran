@@ -11,7 +11,7 @@ public class TicTacToeBoard implements Gameboard {
     private int draws;
 
     public TicTacToeBoard() {
-        this.places = new ArrayList<Character>();
+        this.places = new ArrayList<Character>(); //Character in de diamond operator <> kun je weglaten.
         setBoard();
         this.playedTurns = 0;
         this.gameWon = false;
@@ -52,6 +52,11 @@ public class TicTacToeBoard implements Gameboard {
         return !places.get(position - 1).equals('x') && !places.get(position - 1).equals('o');
     }
 
+    // Het is net om vergelijkingen met Equals te doen.
+    /*
+    It's almost always a mistake to compare two instances of java.lang.String or boxed types like java.lang.Integer
+    using reference equality == or !=, because it is not comparing actual value but locations in memory.
+     */
     public boolean checkWin(Player currentPlayer) {
         //earliest possible win at 3 turns
         //check 1 2 3
@@ -141,6 +146,7 @@ public class TicTacToeBoard implements Gameboard {
         showDraws();
     }
 
+    //player1 parameter wordt niet gebruiktr. Verwijderen?
     public void playerTurn(Player currentPlayer, Player player1) {
         showBoard();
 

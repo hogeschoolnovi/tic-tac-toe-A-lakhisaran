@@ -1,5 +1,6 @@
 package novi.basics;
 
+// verwijder ongebruikte imports
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -31,7 +32,7 @@ public class TicTacToeBoardSingle extends TicTacToeBoard {
     }
 
     public int superDuperAI() {
-        int aiChosenInt = 0;
+        int aiChosenInt = 0; // = 0 hoeft hier niet
         if (places.get(4) == '5') {
             aiChosenInt = 5;
         }

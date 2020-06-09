@@ -2,6 +2,7 @@ package novi.basics;
 
 import java.io.Serializable;
 
+//Waarom serializable?
 public interface Gameboard extends Serializable {
     void startBoard();
 
